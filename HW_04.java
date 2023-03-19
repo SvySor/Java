@@ -1,4 +1,4 @@
-package Seminar01;
+
 
 public class HW_04 {
     private static boolean Solver(char number1, char number2, char result1, int movement) {
