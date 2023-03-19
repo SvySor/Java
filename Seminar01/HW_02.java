@@ -1,4 +1,7 @@
 package Seminar01;
+
+// Вывести все простые числа от 1 до 1000
+
 public class HW_02 {
     private static boolean IsSimple(int number) {
         boolean Check = true;
@@ -10,7 +13,8 @@ public class HW_02 {
             }
         }
         return Check;
-    }    
+    }
+
     public static void main(String[] args) {
         int value = 1000;
         for (int i = 1; i <= value; i++) {

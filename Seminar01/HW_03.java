@@ -1,5 +1,7 @@
 package Seminar01;
 
+// Реализовать простой калькулятор
+
 import java.util.Scanner;
 
 public class HW_03 {
