@@ -2,7 +2,7 @@
 
 // Вывести все простые числа от 1 до 1000
 
-public class HW_02 {
+public class HW_01_02 {
     private static boolean IsSimple(int number) {
         boolean Check = true;
         if (number != 1) {

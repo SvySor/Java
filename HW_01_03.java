@@ -4,7 +4,7 @@
 
 import java.util.Scanner;
 
-public class HW_03 {
+public class HW_01_03 {
     public static void main(String[] args) {
         double number01;
         double number02;
