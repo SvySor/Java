@@ -15,7 +15,7 @@ public class HW_02_02 {
         logger.addHandler(fh);
         SimpleFormatter sFormat = new SimpleFormatter();
         fh.setFormatter(sFormat);
-        int[] mas = { 11, 3, 14, 16, 7 };
+        int[] mas = {38, 1, 14, 37, 114, 12, 73};
         System.out.println(Arrays.toString(mas));
         boolean isSorted = false;
         int buf;
