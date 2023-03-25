@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class HW_03_03 {
 
@@ -41,7 +40,7 @@ public class HW_03_03 {
         int[] arrayInitial = new int[] { 125, 408, 89, 250, 21, 238, 98, 105, 149, 320, 492, 500, 346, 483, 158, 179,
                 154, 400, 457, 230, 475, 97, 360, 346, 107, 300, 123, 284 };
         ArrayList<Integer> List = new ArrayList<Integer>();
-        List = FillArrayList(Arrays.copyOf(arrayInitial, arrayInitial.length));
+        List = FillArrayList(arrayInitial);
         System.out.println("Ваш список: " + List);
         int min = MinArrayList(List);
         System.out.println("Минимальный элемент списка: " + min);
