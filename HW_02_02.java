@@ -19,7 +19,6 @@ public class HW_02_02 {
         System.out.println(Arrays.toString(mas));
         boolean isSorted = false;
         int buf;
-        String mas_String;
         while (!isSorted) {
             isSorted = true;
             for (int i = 0; i < mas.length - 1; i++) {
