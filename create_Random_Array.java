@@ -34,6 +34,7 @@ public class create_Random_Array {
         System.out.println("Дан массив: " + Arrays.toString(array));
         int[] arrayDelete = deleteEvenElement(Arrays.copyOf(array, array.length));
         System.out.println("Удаляем чётные элементы массива: " + Arrays.toString(arrayDelete));
+        sc.close();
     }
 
 }
