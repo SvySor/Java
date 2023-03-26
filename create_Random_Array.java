@@ -15,6 +15,14 @@ public class create_Random_Array {
         return result;
     }
 
+    public static int[] deleteEvenElement(int[] array) {
+        int i, j;
+        for (i = 0, j = 1; j < array.length; i++, j += 2) {
+            array[i] = array[j];
+        }
+        return Arrays.copyOf(array, i);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n;
@@ -22,12 +30,10 @@ public class create_Random_Array {
             System.out.print("Введите длинну массива (n >= 2): ");
             n = sc.nextInt();
         } while (n < 2);
-        System.out.print("Введите минимальное значение массива: ");
-        int arrayMin = sc.nextInt();
-        System.out.print("Введите максимальное значение массива: ");
-        int arrayMax = sc.nextInt();
-        int[] array = createRandomArray(n, arrayMin, arrayMax);
+        int[] array = createRandomArray(n, 1, 9);
         System.out.println("Дан массив: " + Arrays.toString(array));
+        int[] arrayDelete = deleteEvenElement(Arrays.copyOf(array, array.length));
+        System.out.println("Удаляем чётные элементы массива: " + Arrays.toString(arrayDelete));
     }
 
 }
