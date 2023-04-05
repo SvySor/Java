@@ -1,6 +1,9 @@
 // Реализовать класс и вывести его в консоль.
+// Второе задание 
 
 package Seminar06;
+
+import java.util.Objects;
 
 public class Seminar06_04_Cat {
     int id;
@@ -28,6 +31,22 @@ public class Seminar06_04_Cat {
     @Override
     public String toString() {
         return String.format("%d %s %d %s %c", id, name, birthYear, breed, sex);
+    }
+
+    @Override
+    public boolean equals(Object object){
+        Seminar06_04_Cat obj = (Seminar06_04_Cat) object;
+       return this.id == obj.id &&
+            (this.name).equals(obj.name) &&
+            this.birthYear == obj.birthYear &&
+            (this.breed).equals(obj.breed) &&
+            this.sex == obj.sex;
+    }
+
+    @Override
+    public int hashCode(){
+
+        return Objects.hash(id);
     }
 
 }
