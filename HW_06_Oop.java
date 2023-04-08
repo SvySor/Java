@@ -1,55 +1,31 @@
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.Scanner;
 
 public class HW_06_Oop {
     
-        public void filterNB(HashSet<> notes) {
-            System.out.print("Enter a number: ");
+        public static void filterNB(Set<HW_06_Notebook> notes) {
             Scanner scanner = new Scanner(System.in);
-            int value = scanner.nextInt();
-            System.out.printf("Inputed value: %d", value);
-            System.out.print("\n");
-            int Summa = 0;
-            int Factorial = 1;
-            for (int i = 0; i <= value; i++) {
-                Summa = Summa + i;
-            }
-            if (value > 1) {
-                for (int i = 1; i <= value; i++) {
-                    Factorial = Factorial * i;
+            Map<String, Integer> criterias = new HashMap<>();
+            System.out.print("Введите производителя процессора (1 - Intel/ 2 - AMD): ");
+            criterias.put("processor", scanner.nextInt());
+            System.out.print("Введите минимальный объём RAM (ГБ): ");
+            criterias.put("ram_gb", scanner.nextInt());
+            System.out.print("Введите минимальный объём HDD (ГБ): ");
+            criterias.put("hdd_gb", scanner.nextInt());
+            System.out.print("Введите предустановленную ОС HDD (1 - Windows, 2 - Linux, 3 - no OS): ");
+            criterias.put("os", scanner.nextInt());
+            System.out.print(criterias);
+            for (HW_06_Notebook note : notes) {
+                if (note.getCPU() == criterias.get("processor") && note.getRAM() > criterias.get("ram_gb")) {
+                    System.out.println(note);
                 }
             }
-            System.out.printf("Triangle value is: %d", Summa);
-            System.out.print("\n");
-            System.out.printf("Factorial of value is: %d", Factorial);
             scanner.close();
         }
-    }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public static void main(String[] args) {
         HW_06_Notebook nb1 = new HW_06_Notebook(1, "DELL", "Intel", 128, 480, 'W', "gray");
         HW_06_Notebook nb2 = new HW_06_Notebook();
@@ -68,8 +44,6 @@ public class HW_06_Oop {
         HW_06_Notebook nb8 = new HW_06_Notebook(8, "Huawei", "AMD", 256, 720, 'W', "white");
         Set<HW_06_Notebook> notes = new HashSet<>(Arrays.asList(nb1, nb2, nb3, nb4, nb5, nb6, nb7, nb8));
         System.out.println(notes);
-
-
-
+        filterNB(notes);
     }
 }

@@ -12,7 +12,7 @@
 //  — сохранить параметры фильтрации можно также в Map.
 // Отфильтровать ноутбуки их первоначального множества и вывести проходящие по условиям.
 
-import java.util.Objects;
+// import java.util.Objects;
 
 public class HW_06_Notebook {
     int id;
@@ -47,5 +47,26 @@ public class HW_06_Notebook {
     @Override
     public String toString() {
         return String.format("%d %s %s %d %d %c %s", id, brand, CPU, RAM, HDD, OS, color);
+    }
+
+    public int getRAM() {
+        return RAM;
+    }
+
+    public int getCPU() {
+        switch (CPU) {
+            case "Intel": return 1;
+            case "AMD": return 2;
+            default: return 0;
+            }
+    }
+
+    public int getOS() {
+        switch (OS) {
+            case 'W': return 1;
+            case 'L': return 2;
+            case 'N': return 3;
+            default: return 0;
+        }
     }
 }

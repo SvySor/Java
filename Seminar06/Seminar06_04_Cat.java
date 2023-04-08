@@ -45,7 +45,6 @@ public class Seminar06_04_Cat {
 
     @Override
     public int hashCode(){
-
         return Objects.hash(id);
     }
 
